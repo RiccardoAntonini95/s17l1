@@ -18,11 +18,6 @@ namespace edilData.Controllers
             return View();
         }
 
-        public IActionResult EmployeeForm()
-        {
-            return View();
-        }
-
         public IActionResult Privacy()
         {
             return View();
