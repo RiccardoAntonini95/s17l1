@@ -1,4 +1,19 @@
-﻿@*AGGIUNGERE RENDERIZZAZIONE PAGAMENTI*@
-@{
+﻿@{
 }
-<h1>Tabella pagamenti</h1>
+
+<table>
+    <tr>
+        <th>Period</th>
+        <th>Amount</th>
+        <th>Type</th>
+    </tr>
+    @foreach (var payment in StaticDb._payments)
+    {
+        <tr>
+            <td>@payment.PaymentPeriod</td>
+            <td>@payment.PaymentAmount</td>
+            <td>@payment.PaymentType</td>
+        </tr>
+    }
+
+</table>

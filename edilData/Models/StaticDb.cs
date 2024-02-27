@@ -3,6 +3,9 @@
     public static class StaticDb
     {
         private static int _maxId = 3;
+        private static int payId = 0;
+        public static List<Payment> _payments = [ 
+            ];
         public static List<Employee> _employee = [
             new Employee()
             {
@@ -38,6 +41,20 @@
                 Role = "Director"
             },
         ];
+
+        public static Payment Add(DateOnly period, double amount, string type)
+        {
+            payId++;
+            var payment = new Payment()
+            {
+                IdPayment = payId,
+                PaymentPeriod = period,
+                PaymentAmount = amount,
+                PaymentType = type
+            };
+            _payments.Add(payment);
+            return payment;
+        }
 
         public static Employee Add(string firstName, string lastName, string address, string fiscalCode, string conjugality, int children, string role)
         {

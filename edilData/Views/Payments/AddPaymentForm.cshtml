@@ -1,6 +1,26 @@
 ﻿@{
 }
-
-<h1>form pagamenti</h1>
+<form class="text-center" method="post" asp-controller="Payments" asp-action="AddPaymentForm">
+    <fieldset>
+        <legend>Payment:</legend>
+        <label for="paymentPeriod">Payment period:</label>
+        <input type="date" id="paymentPeriod" name="paymentPeriod">
+        <br>
+        <br>
+        <label for="paymentAmount">Payment amount:</label>
+        <input type="number" id="paymentAmount" name="paymentAmount">
+        <br>
+        <br>
+        <p>Payment type?:</p>
+        <input type="radio" id="salary" name="paymentType" value="Salary">
+        <label for="salary">Salary</label>
+        <br>
+        <input type="radio" id="advance" name="paymentType" value="Advance on salary">
+        <label for="advance">Advance on salary</label>
+        <br>
+        <br>
+        <button type="submit" value="Submit">Submit</button>
+    </fieldset>
+</form>
 
 
