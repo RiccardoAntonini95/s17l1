@@ -1,7 +1,29 @@
-﻿@*
-    AGGIUNGERE RENDERIZZAZIONE DIPENDENTI TABELLA
-*@
-@{
+﻿@{
 }
 
 <h1>Tabella dipendenti</h1>
+
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Address</th>
+        <th>Fiscal Code</th>
+        <th>Conjugality</th>
+        <th>Children</th>
+        <th>Role</th>
+    </tr>
+    @foreach(var employee in StaticDb._employee)
+    {
+        <tr>
+            <td>@employee.FirstName</td>
+            <td>@employee.LastName</td>
+            <td>@employee.Address</td>
+            <td>@employee.FiscalCode</td>
+            <td>@employee.Conjugality</td>
+            <td>@employee.Children</td>
+            <td>@employee.Role</td>
+        </tr>
+    }
+    
+</table>
